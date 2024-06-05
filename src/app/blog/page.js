@@ -10,7 +10,7 @@ export default function Blog({ params }) {
             Post list
         </div>
         {posts.map(p => 
-        <p><Link href={`/blog/${p.id}`} className="hover:text-blue-700">{p.title}</Link></p>
+        <p key={p.id}><Link key={p.id} href={`/blog/${p.id}`} className="hover:text-blue-700">{p.title}</Link></p>
       )}
     </div>
   );
